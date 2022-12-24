@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="reset.css">
+        <link href="style.css" rel="stylesheet">
+        <title>Encripta | Desencripta texto</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+
+    <body>
+        <header>
+            <div class="linksh"><a href="https://app.aluracursos.com/user/crowix" target="_blank"><img src="imagenes/logo-aluraespanhol.svg"></a></div>
+        </header>
+        <div id="description"><strong>¿Que puedo cifrar?</strong> Solo puedes cifrar texto en minúsculas, no esta permitido usar mayúsculas, acentos, números o caracteres especiales.</div>
+        <main class="main">
+            <div id="text" class="cont1">
+                <div id="input-area">
+                    <textarea title="text" autocomplete="off" placeholder="Escriba aquí el texto a encriptar..." id="input"></textarea>
+                </div>
+                <div id="botones">
+                    <div id="encrip" class="boton">
+                        <button title="encrip" type="button" id="encripb" onclick="mostrar('copiarb')">Encriptar</button>
+                    </div>
+                    <div id="desencrip" class="boton">
+                        <button title="desencrip" type="button" id="desencripb" onclick="mostrar('copiarb')">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="alert" title="alert">¡Solo se permiten letras en minuscula!</div>
+            <div id="copiar-text">
+                <div id="copiar-cont">
+                    <textarea title="result" autocomplete="off" readonly="true" id="copiar-area" disabled placeholder="Texto encriptado."></textarea>
+                </div>
+                <div id="copiar" class="boton">
+                    <button title="copiar" type="button" id="copiarb" onclick="mostrar('limpiarb')">Copiar</button>
+                </div>
+                <div id="limpiar" class="boton">
+                    <button title="limpiar" type="button" id="limpiarb" onclick="ocultar('limpiarb')" style="display: none;">¡Borrar todo!</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="instagram" class="linksf"><a href="https://github.com/icrowix" target="_blank"><img src="imagenes/logo-one.webp"></a></div>
+            <div id="designed">Creado por <strong>Angel Gabriel Gamboa Rodriguez</strong></div>
+        </footer>
+    </body>
+    <script src="./code/functions.js"></script>
+
+    <script> //Ocultar boton de copiar al presionarlo, se muestra hasta que presionan encriptar, desencriptar o borrar todo
+        function ocultar(id){
+            var elemento = document.getElementById(id);
+            elemento.style.display = "none";
+        }
+
+        function mostrar(id){
+            var elemento = document.getElementById(id);
+            elemento.style.display = "initial";
+        }
+    </script>
+</html>
