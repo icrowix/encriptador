@@ -46,10 +46,9 @@
             <div id="instagram" class="linksf"><a href="https://github.com/icrowix" target="_blank"><img src="imagenes/logo-one.webp"></a></div>
             <div id="designed">Creado por <strong>Angel Gabriel Gamboa Rodriguez</strong></div>
         </footer>
-    </body>
-    <script src="./code/functions.js"></script>
 
-    <script> //Ocultar boton de copiar al presionarlo, se muestra hasta que presionan encriptar, desencriptar o borrar todo
+        <script>
+    //Ocultar boton de copiar al presionarlo, se muestra hasta que presionan encriptar, desencriptar o borrar todo
         function ocultar(id){
             var elemento = document.getElementById(id);
             elemento.style.display = "none";
@@ -60,7 +59,7 @@
             elemento.style.display = "initial";
         }
 
-        //Comienza encriptación y desencriptación
+    //Comienza encriptación y desencriptación
 
                 const re = /^[a-z\s]+$/;
                 function encriptar(e) {
@@ -140,5 +139,6 @@
                 document.querySelector('#desencripb').addEventListener('click',e => desencriptar(e))
                 document.querySelector('#copiarb').addEventListener('click', e => copiar())
                 document.querySelector('#input').addEventListener('focus', e => lasSolo())
-            </script>
+        </script>
+    </body>
 </html>
