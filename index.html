@@ -32,7 +32,7 @@
             <div id="alert" title="alert">¡Solo se permiten letras en minuscula!</div>
             <div id="copiar-text">
                 <div id="copiar-cont">
-                    <textarea title="result" autocomplete="off" readonly="true" id="copiar-area" disabled placeholder="Texto encriptado."></textarea>
+                    <textarea title="result" autocomplete="off" readonly="true" id="copiar-area" disabled placeholder="Texto encriptado."><p></p></textarea>
                 </div>
                 <div id="copiar" class="boton">
                     <button title="copiar" type="button" id="copiarb" onclick="mostrar('limpiarb')">Copiar</button>
@@ -48,6 +48,7 @@
         </footer>
 
         <script>
+
     //Ocultar boton de copiar al presionarlo, se muestra hasta que presionan encriptar, desencriptar o borrar todo
         function ocultar(id){
             var elemento = document.getElementById(id);
